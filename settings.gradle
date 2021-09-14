@@ -1,0 +1,5 @@
+rootProject.name = "Moon"
+include ':app'
+include ':library'
+include ':allrecycleview'
+include ':viewfractory'
