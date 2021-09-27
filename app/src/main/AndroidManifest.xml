@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Moon">
         <activity
-            android:name=".StartActivity"
+            android:name=".NewStartActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Moon.Start">
             <intent-filter>
@@ -31,9 +31,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>-->
         </activity>
-        <activity android:name=".PostActivity"
+        <activity android:name=".MyPostActivity"
             android:screenOrientation="portrait"
             />
+        <activity android:name=".NewStartActivity" />
     </application>
 
 </manifest>

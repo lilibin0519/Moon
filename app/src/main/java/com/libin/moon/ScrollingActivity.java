@@ -1,44 +1,33 @@
 package com.libin.moon;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.libin.library.adapter.BaseAdapter;
 import com.libin.library.adapter.BaseAdapterViewListener;
-import com.libin.library.util.ClickProxy;
 import com.libin.moon.databinding.ActivityScrollingBinding;
 import com.libin.moon.databinding.ItemDiaryBinding;
 import com.libin.moon.model.DiaryModel;
 import com.libin.moon.util.OnQueryListener;
 import com.libin.moon.util.RealmUtil;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 import em.sang.com.allrecycleview.adapter.DefaultAdapter;
 import em.sang.com.allrecycleview.cutline.RecycleViewDivider;
-import em.sang.com.allrecycleview.holder.CustomHolder;
-import em.sang.com.allrecycleview.inter.DefaultAdapterViewListener;
 import em.sang.com.allrecycleview.listener.OnToolsItemClickListener;
 
 public class ScrollingActivity extends BaseActivity<ActivityScrollingBinding> implements OnToolsItemClickListener<DiaryModel> {
@@ -70,7 +59,7 @@ public class ScrollingActivity extends BaseActivity<ActivityScrollingBinding> im
         fab.setOnClickListener(view -> {
 //            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                    .setAction("Action", null).show();
-            readyGoForResult(PostActivity.class, AppConstant.REQUEST_CODE_POST);
+            readyGoForResult(MyPostActivity.class, AppConstant.REQUEST_CODE_POST);
         });
         initContent();
         requestData();

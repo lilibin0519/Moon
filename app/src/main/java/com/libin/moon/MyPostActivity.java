@@ -44,9 +44,9 @@ import em.sang.com.allrecycleview.inter.DefaultAdapterViewListener;
  * @author lilibin
  * @date 2021/8/13
  */
-public class PostActivity extends BaseActivity<ActivityPostBinding> {
+public class MyPostActivity extends BaseActivity<ActivityPostBinding> {
 
-    private List<MyPhoto> data;
+    private List<MyPhoto> data = new ArrayList<>();
 
     private RecyclerView content;
 
